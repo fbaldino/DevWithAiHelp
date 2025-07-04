@@ -1,1 +1,23 @@
-##This project was created for test purpses only
+# Flask Hello World
+
+This sample project demonstrates a simple Flask application with tests and an Nginx reverse proxy in front.
+The `/test` endpoint runs the unit tests and returns results in plain text.
+
+
+1. Build and start the stack using Docker Compose:
+
+```bash
+docker-compose up --build
+```
+
+2. Once running, open [http://localhost:8080/](http://localhost:8080/) to see
+   the "Hello, World!" message.
+3. To execute the tests via the web interface, navigate to
+   [http://localhost:8080/test](http://localhost:8080/test).
+
+Alternatively, you can run tests directly with `pytest`:
+
+```bash
+pip install -r requirements.txt
+pytest -q
+```
