@@ -1,1 +1,32 @@
-##This project was created for test purpses only
+# Flask Hello World
+
+This sample project demonstrates a simple Flask application with tests and an Nginx reverse proxy in front.
+
+## Run the application
+
+Build and start the stack using Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Once running, open [http://localhost:8080/](http://localhost:8080/) to see the "Hello, World!" message.
+
+The [http://localhost:8080/test](http://localhost:8080/test) endpoint displays the command for running the test suite. It does not execute tests for each HTTP request.
+
+## Run the tests
+
+With Docker Compose:
+
+```bash
+docker compose exec app pytest -q
+```
+
+Or locally:
+
+```bash
+pip install -r requirements.txt
+pytest -q
+```
+
+The Docker image installs the dependencies in `requirements.txt`, including pytest.
